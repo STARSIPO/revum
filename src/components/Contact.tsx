@@ -53,7 +53,7 @@ export function Contact() {
               </li>
             </ul>
 
-            <div>
+            <div className="contact__follow">
               <div className="lbl" style={{ marginBottom: '0.4rem' }}>{L.followUs}</div>
               <div className="contact__socials">
                 <a href={clinicInfo.whatsapp} target="_blank" rel="noopener noreferrer" aria-label={L.whatsapp}>

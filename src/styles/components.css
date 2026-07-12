@@ -142,7 +142,13 @@
   color: var(--cream);
   display: flex;
   flex-direction: column;
-  padding: clamp(1.15rem, 4vw, 2rem);
+  padding:
+    max(clamp(1.15rem, 4vw, 2rem), env(safe-area-inset-top))
+    max(clamp(1.15rem, 4vw, 2rem), env(safe-area-inset-right))
+    max(clamp(1.15rem, 4vw, 2rem), env(safe-area-inset-bottom))
+    max(clamp(1.15rem, 4vw, 2rem), env(safe-area-inset-left));
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
   opacity: 0;
   visibility: hidden;
   /* Fade opacity, but flip visibility instantly on open (delay only on close)
@@ -456,7 +462,9 @@
   border-bottom: 1px solid var(--line);
   overflow: hidden;
 }
-.tcard__visual img { width: 100%; height: 100%; object-fit: cover; position: absolute; inset: 0; }
+/* Only real photos fill the visual box; the placeholder emblem keeps its
+   small centered size (otherwise it outranks .tcard__emblem and stretches). */
+.tcard__visual img:not(.tcard__emblem) { width: 100%; height: 100%; object-fit: cover; position: absolute; inset: 0; }
 .tcard__emblem { width: 72px; opacity: 0.5; filter: drop-shadow(0 6px 24px rgba(0,0,0,0.4)); }
 .tcard__ph {
   position: absolute; bottom: 0.8rem; left: 0.9rem;
@@ -629,7 +637,7 @@
   position: fixed;
   z-index: 120;
   left: 50%;
-  bottom: clamp(1rem, 3vw, 1.6rem);
+  bottom: calc(clamp(1rem, 3vw, 1.6rem) + env(safe-area-inset-bottom, 0px));
   transform: translateX(-50%) translateY(0);
   width: min(680px, calc(100% - 2rem));
   background: var(--noir-soft);
@@ -777,3 +785,24 @@
 @media (max-width: 360px) {
   .hero h1 { font-size: 2.35rem; }
 }
+
+/* Short / landscape viewports: menu flows from the top and scrolls, so the
+   Book button and last links stay reachable (menu itself is overflow-y:auto). */
+@media (max-height: 640px) {
+  .mobilemenu__nav { margin-block: 1rem 0; }
+  .mobilemenu__link { font-size: clamp(1.4rem, 7vw, 2rem); }
+  .mobilemenu__footer { margin-top: 1.25rem; }
+}
+
+/* Keep the About badge a true circle on phones (long label was making it
+   egg-shaped by forcing the content taller than the 120px width). */
+@media (max-width: 860px) {
+  .about__media-badge { padding: 0.7rem; }
+  .about__media-badge .emblem { width: 40px; margin-bottom: 0.35rem; }
+}
+
+/* Comfortable tap targets for the primary contact links and footer legal. */
+.contact__row a.val { display: inline-block; padding-block: 0.4rem; margin-block: -0.4rem; }
+.contact__follow { margin-top: 1.75rem; }
+.footer__legal button { padding-block: 0.5rem; }
+.footer__col a { padding-block: 0.3rem; }
