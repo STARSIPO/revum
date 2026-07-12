@@ -6,7 +6,6 @@ import { Advantages } from './components/Advantages'
 import { About } from './components/About'
 import { Services } from './components/Services'
 import { Technologies } from './components/Technologies'
-import { Gallery } from './components/Gallery'
 import { CtaBook } from './components/CtaBook'
 import { Contact } from './components/Contact'
 import { Footer } from './components/Footer'
@@ -48,7 +47,6 @@ function Site() {
         <About />
         <Services />
         <Technologies />
-        <Gallery />
         <CtaBook />
         <Contact />
       </main>

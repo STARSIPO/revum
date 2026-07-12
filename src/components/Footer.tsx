@@ -12,7 +12,7 @@ export function Footer({ onOpenPolicy }: { onOpenPolicy: (k: PolicyKind) => void
   const hours = lang === 'ru' ? clinicInfo.hoursRU : clinicInfo.hoursRO
 
   return (
-    <footer className="footer">
+    <footer className="footer on-dark">
       <div className="container container--wide">
         <div className="footer__grid">
           <div className="footer__brandcol">

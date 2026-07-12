@@ -12,7 +12,7 @@ export function CookieBanner({ open, onAccept, onDecline, onMore }: CookieBanner
   if (!open) return null
 
   return (
-    <div className="cookie" role="region" aria-label="cookie">
+    <div className="cookie on-dark" role="region" aria-label={t.common.cookieLabel}>
       <p>
         {t.cookie.text}{' '}
         <button type="button" className="cookie__more" onClick={onMore}>

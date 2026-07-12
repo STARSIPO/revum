@@ -10,6 +10,5 @@ export const NAV: NavItem[] = [
   { key: 'about', href: '#about' },
   { key: 'services', href: '#services' },
   { key: 'technologies', href: '#technologies' },
-  { key: 'gallery', href: '#gallery' },
   { key: 'contact', href: '#contact' },
 ]

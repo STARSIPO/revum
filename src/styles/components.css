@@ -233,6 +233,7 @@
   font-weight: 500;
   max-width: 15ch;
   margin-bottom: 1.5rem;
+  color: var(--cream);
 }
 .hero h1 .accent { font-style: italic; }
 .hero__lead { max-width: 52ch; color: color-mix(in srgb, var(--cream) 84%, transparent); }
@@ -510,7 +511,7 @@
 .cta__media img { width: 100%; height: 100%; object-fit: cover; }
 .cta__scrim { position: absolute; inset: 0; z-index: -1; background: linear-gradient(180deg, rgba(9,9,9,0.82), rgba(9,9,9,0.72)); }
 .cta__inner { padding-block: clamp(5rem, 12vw, 9rem); max-width: 40ch; margin-inline: auto; }
-.cta h2 { font-size: var(--fs-h2); margin-bottom: 1.2rem; }
+.cta h2 { font-size: var(--fs-h2); margin-bottom: 1.2rem; color: var(--cream); }
 .cta p { color: color-mix(in srgb, var(--cream) 82%, transparent); margin-bottom: 2rem; }
 
 /* ============ CONTACT ============ */

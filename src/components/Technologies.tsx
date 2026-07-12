@@ -13,7 +13,7 @@ export function Technologies() {
   const apps = (x: Technology) => (lang === 'ru' ? x.appsRU : x.appsRO)
 
   return (
-    <section id="technologies" className="section tech">
+    <section id="technologies" className="section tech on-dark">
       <div className="container">
         <Reveal>
           <SectionHead eyebrow={t.technologies.eyebrow} title={t.technologies.heading} lead={t.technologies.lead} />
