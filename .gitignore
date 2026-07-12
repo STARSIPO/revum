@@ -1,0 +1,10 @@
+node_modules
+dist
+dist-ssr
+*.local
+.DS_Store
+.vite
+
+# Raw source assets kept for reference / re-processing (large originals).
+# Uncomment the next line if you do NOT want to version the originals.
+# _raw

@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="ro">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="theme-color" content="#090909" />
+
+    <title>RÉVUM Aesthetic Clinic — Tratamente estetice în Chișinău</title>
+    <meta
+      name="description"
+      content="RÉVUM Face & Body Clinic — tratamente estetice moderne, tehnologii avansate și îngrijire personalizată într-un spațiu elegant din Chișinău. Programează o consultație."
+    />
+    <link rel="canonical" href="https://revumclinic.com/" />
+
+    <!-- Favicons (see public/) -->
+    <link rel="icon" type="image/png" sizes="32x32" href="./favicon-32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="./favicon-16.png" />
+    <link rel="apple-touch-icon" href="./apple-touch-icon.png" />
+
+    <!-- Preload the LCP hero image (responsive webp set, stable public path) -->
+    <link
+      rel="preload"
+      as="image"
+      href="./media/hero-1400.webp"
+      imagesrcset="./media/hero-800.webp 800w, ./media/hero-1400.webp 1400w, ./media/hero-2200.webp 2200w"
+      imagesizes="100vw"
+      fetchpriority="high"
+      type="image/webp"
+    />
+
+    <!-- Open Graph / social (absolute URLs assume the revumclinic.com domain) -->
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="RÉVUM Aesthetic Clinic" />
+    <meta property="og:title" content="RÉVUM Aesthetic Clinic — Tratamente estetice în Chișinău" />
+    <meta
+      property="og:description"
+      content="Tratamente estetice moderne, tehnologii avansate și îngrijire personalizată într-un spațiu elegant din Chișinău."
+    />
+    <meta property="og:image" content="https://revumclinic.com/og-image.jpg" />
+    <meta property="og:image:alt" content="RÉVUM Aesthetic Clinic" />
+    <meta property="og:url" content="https://revumclinic.com/" />
+    <meta property="og:locale" content="ro_RO" />
+    <meta property="og:locale:alternate" content="ru_RU" />
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <link rel="alternate" hreflang="ro" href="https://revumclinic.com/" />
+    <link rel="alternate" hreflang="x-default" href="https://revumclinic.com/" />
+
+    <!-- Structured data — real details only, no fabricated hours/ratings -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "BeautySalon",
+        "name": "RÉVUM Face & Body Clinic",
+        "description": "Clinică de estetică facială și corporală în Chișinău — tehnologii moderne și îngrijire personalizată.",
+        "image": "https://revumclinic.com/og-image.jpg",
+        "url": "https://revumclinic.com/",
+        "telephone": "+37361292786",
+        "email": "contact@revumclinic.com",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Strada Ghică Vodă 3A",
+          "addressLocality": "Chișinău",
+          "addressCountry": "MD"
+        },
+        "sameAs": ["https://www.instagram.com/revum_clinic.md/"]
+      }
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
